@@ -48,7 +48,7 @@
     self.controlView = [[[NSBundle mainBundle] loadNibNamed:@"ITunesOverallPlayerView" owner:nil options:nil] firstObject];
     self.controlView.tag = OverallPlayerViewTag;
     
-    self.controlView.frame = CGRectMake(0, CGRectGetMinY(self.tabBar.frame) - CGRectGetHeight(self.controlView.frame), CGRectGetWidth(self.controlView.frame), CGRectGetHeight(self.controlView.frame));
+    self.controlView.frame = CGRectMake(0, CGRectGetMinY(self.tabBar.frame) - CGRectGetHeight(self.controlView.frame), CGRectGetWidth(self.view.frame), CGRectGetHeight(self.controlView.frame));
     
     [self.view insertSubview:self.controlView belowSubview:self.tabBar];
     

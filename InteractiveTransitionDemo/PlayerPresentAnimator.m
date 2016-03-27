@@ -24,6 +24,7 @@
     UIView *transitionOveralControl = [from.view viewWithTag:OverallPlayerViewTag];
     UITabBar *transitionBar = from.tabBar;
     
+    to.view.frame = [transitionContext finalFrameForViewController:to];
     to.view.transform = CGAffineTransformMakeTranslation(0, CGRectGetHeight(transitionOveralControl.frame));
     
     [transitionOveralControl addSubview:to.view];
